@@ -32,9 +32,9 @@ $(document).ready(function(){
           return hostname;
       }
       if (getHostname(query) == "is.gd") {
-        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://is.gd/forward.php?format=simple&shorturl=" + query);
+        url = "https://miniurlid.000webhostapp.com/app/fileproxy?url=" + encodeURIComponent("https://is.gd/forward.php?format=simple&shorturl=" + query);
       } else if (getHostname(query) == "v.gd") {
-        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://v.gd/forward.php?format=simple&shorturl=" + query);
+        url = "https://miniurlid.000webhostapp.com/app/fileproxy?url=" + encodeURIComponent("https://v.gd/forward.php?format=simple&shorturl=" + query);
       } else if (getHostname(query) == "miniurl.id" || getHostname(query) == "mrl.6te.net" || getHostname(query) == "rl.rf.gd" || getHostname(query) == "iurl.rf.gd" || getHostname(query) == "mnurl.xyz" || getHostname(query) == "mnurlxyz.000webhostapp.com") {
         query = query.replace("miniurl.id/", "");
         query = query.replace("http://miniurl.id/", "");
@@ -56,7 +56,7 @@ $(document).ready(function(){
         query = query.replace("https://mnurlxyz.000webhostapp.com/", "");
         url = "https://miniurlid.000webhostapp.com/api/get-url?alias=" + query;
       } else {
-        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://unshorten.me/s/" + query);
+        url = "https://miniurlid.000webhostapp.com/app/fileproxy?url=" + encodeURIComponent("https://unshorten.me/s/" + query);
       }
       if(query !== ""){ 
         $.ajax({
