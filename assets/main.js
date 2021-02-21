@@ -36,24 +36,24 @@ $(document).ready(function(){
       } else if (getHostname(query) == "v.gd") {
         url = "https://miniurlid.000webhostapp.com/app/fileproxy?url=" + encodeURIComponent("https://v.gd/forward.php?format=simple&shorturl=" + query);
       } else if (getHostname(query) == "miniurl.id" || getHostname(query) == "mrl.6te.net" || getHostname(query) == "rl.rf.gd" || getHostname(query) == "iurl.rf.gd" || getHostname(query) == "mnurl.xyz" || getHostname(query) == "mnurlxyz.000webhostapp.com") {
-        query = query.replace("miniurl.id/", "");
         query = query.replace("http://miniurl.id/", "");
         query = query.replace("https://miniurl.id/", "");
-        query = query.replace("mrl.6te.net/", "");
+        query = query.replace("miniurl.id/", "");
         query = query.replace("http://mrl.6te.net/", "");
         query = query.replace("https://mrl.6te.net/", "");
-        query = query.replace("rl.rf.gd/", "");
+        query = query.replace("mrl.6te.net/", "");
         query = query.replace("http://rl.rf.gd/", "");
         query = query.replace("https://rl.rf.gd/", "");
-        query = query.replace("iurl.rf.gd/", "");
+        query = query.replace("rl.rf.gd/", "");
         query = query.replace("http://iurl.rf.gd/", "");
         query = query.replace("https://iurl.rf.gd/", "");
-        query = query.replace("mnurl.xyz/", "");
+        query = query.replace("iurl.rf.gd/", "");
         query = query.replace("http://mnurl.xyz/", "");
         query = query.replace("https://mnurl.xyz/", "");
-        query = query.replace("mnurlxyz.000webhostapp.com/", "");
+        query = query.replace("mnurl.xyz/", "");
         query = query.replace("http://mnurlxyz.000webhostapp.com/", "");
         query = query.replace("https://mnurlxyz.000webhostapp.com/", "");
+        query = query.replace("mnurlxyz.000webhostapp.com/", "");
         url = "https://miniurlid.000webhostapp.com/api/get-url?alias=" + query;
       } else {
         url = "https://miniurlid.000webhostapp.com/app/fileproxy?url=" + encodeURIComponent("https://unshorten.me/s/" + query);
