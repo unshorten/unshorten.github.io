@@ -12,7 +12,7 @@ var url;
 $(document).ready(function(){
   $("#btn").click(function(e){
       e.preventDefault();
-      let query = $("#query").val();
+      var query = $("#query").val();
       function getHostname(url,tld) {
           let hostname;
           //find & remove protocol (http, ftp, etc.) and get hostname
@@ -32,13 +32,31 @@ $(document).ready(function(){
           return hostname;
       }
       if (getHostname(query) == "is.gd") {
-        url = "https://is.gd/forward.php?format=simple&shorturl=" + query;
+        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://is.gd/forward.php?format=simple&shorturl=" + query);
       } else if (getHostname(query) == "v.gd") {
-        url = "https://v.gd/forward.php?format=simple&shorturl=" + query;
+        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://v.gd/forward.php?format=simple&shorturl=" + query);
       } else if (getHostname(query) == "miniurl.id" || getHostname(query) == "mrl.6te.net" || getHostname(query) == "rl.rf.gd" || getHostname(query) == "iurl.rf.gd" || getHostname(query) == "mnurl.xyz" || getHostname(query) == "mnurlxyz.000webhostapp.com") {
+        query = query.replace("miniurl.id/", "");
+        query = query.replace("http://miniurl.id/", "");
+        query = query.replace("https://miniurl.id/", "");
+        query = query.replace("mrl.6te.net/", "");
+        query = query.replace("http://mrl.6te.net/", "");
+        query = query.replace("https://mrl.6te.net/", "");
+        query = query.replace("rl.rf.gd/", "");
+        query = query.replace("http://rl.rf.gd/", "");
+        query = query.replace("https://rl.rf.gd/", "");
+        query = query.replace("iurl.rf.gd/", "");
+        query = query.replace("http://iurl.rf.gd/", "");
+        query = query.replace("https://iurl.rf.gd/", "");
+        query = query.replace("mnurl.xyz/", "");
+        query = query.replace("http://mnurl.xyz/", "");
+        query = query.replace("https://mnurl.xyz/", "");
+        query = query.replace("mnurlxyz.000webhostapp.com/", "");
+        query = query.replace("http://mnurlxyz.000webhostapp.com/", "");
+        query = query.replace("https://mnurlxyz.000webhostapp.com/", "");
         url = "https://miniurlid.000webhostapp.com/api/get-url?alias=" + query;
       } else {
-        url = "https://unshorten.me/s/" + query;
+        url = "https://fileproxy.miniurl.repl.co/?url=" + encodeURIComponent("https://unshorten.me/s/" + query);
       }
       if(query !== ""){ 
         $.ajax({
