@@ -1,0 +1,56 @@
+/*
+* style.css
+* https://github.com/unshorten/unshorten.github.io/blob/main/assets/style.css
+* https://unshorten.github.io/assets/style.css
+* 
+* By xyti, https://github.com/xyti
+*
+* License : https://github.com/unshorten/unshorten.github.io/blob/main/LICENSE (MIT)
+* source  : https://github.com/unshorten/unshorten.github.io
+*/
+body {
+    margin: 0;
+}
+.bgcolor {
+    background-color: #222222;
+}
+h2, h3, h4, h5, a, span {
+    color: white;
+}
+label, a {
+	color: black;
+    vertical-align: middle;
+}
+h2, h3, label, textarea, a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.maxwidth {
+    max-width: 500px;
+}
+input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background-color: #45a049;
+}
+div.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text], input[type=number], textarea, input[type=url] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
